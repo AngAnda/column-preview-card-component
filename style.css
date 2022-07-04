@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); 
+    --Very-light-gray-: hsl(0, 0%, 95%); /*paragraphs*/
+    --font-size: 15px; /* background, heading, buttons */
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: var(--font-size);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-light-gray-);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main{
+    max-width: 960px;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden; /* important*/
+}
+
+.container{
+  /*  border-radius: 15px;*/
+    padding: 50px;
+    overflow: hidden;
+    background-color: var(--Dark-cyan);
+}
+
+
+
+.container:first-child{
+    background-color: var(--Bright-orange);
+}
+
+.container:last-child{
+    background-color: var(--Very-dark-cyan);
+}
+
+.pic{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 40px;
+}
+
+h1{
+    color:var(--Very-light-gray-);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase; 
+    font-size: 30px;
+}
+
+p{
+    color:var(--Transparent-white);
+    line-height: 1.6;
+}
+
+button{
+    background-color: var(--Very-light-gray-);
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid var(--Very-light-gray-);
+    text-align:center;
+    border-radius: 20px;
+    padding:13px 27px;
+    margin-top: 60px;
+    color:var(--Dark-cyan);
+}
+
+/*
+   * button:last-child affects all buttons?
+*/
+
+.container:first-child button{
+    color:var(--Bright-orange);
+}
+
+.container:last-child button{
+    color:var(--Very-dark-cyan);
+}
+
+button:hover{
+    border: 2px solid var(--Very-light-gray-); /* *trebuie verificata dimensiunea borurii */
+    background-color: transparent;
+    color:var(--Very-light-gray-);
+    cursor: pointer;
+    /* * trebuie adaugat border-radius */
+}
+
+.container:first-child button:hover{
+    color:var(--Very-light-gray-);
+}
+
+.container:last-child button:hover{
+    color:var(--Very-light-gray-);
+}
+
+.container *{
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 376px) {
+    /* For mobile phones: */
+    main{
+        grid-template-columns: 1fr;
+    }
+  }
+
+@media only screen and (max-width: 760px) {
+    /* For mobile phones: */
+    main{
+        grid-template-columns: 1fr;
+    }
+  }
